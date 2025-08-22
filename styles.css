@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav-logo .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #dc3545;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #d9d9d9, #979797);
+  position: relative;
+  padding: 60px 0; /* gave more breathing room */
+  margin-top: 0;
+  overflow: hidden;
+}
+
+/* Grain / texture overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("grain.png"); /* tiny noise texture */
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Radial highlight */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+  top: -150px;
+  right: -150px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Subtle angled overlay to add depth */
+.hero-section::before,
+.hero-section::after {
+  mix-blend-mode: overlay;
+}
+
+/* Hero container */
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile image */
+.hero-image {
+  flex: 1;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* added subtle depth */
+}
+
+/* Content */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aligns title + button to the right */
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  text-align: right;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #222; /* slightly darker than #333 for stronger contrast */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle pop */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.name-highlight {
+  color: #dc3545;
+}
+
+.cta-button {
+  background-color: #8b1538;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+}
+
+.cta-button:hover {
+  background-color: #6d1028;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Sections */
+.details-section {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  color: #dc3545;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Personal Details */
+.personal-details {
+  margin-bottom: 3rem;
+}
+
+.details-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+.detail-value {
+  color: #666;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+  margin-bottom: 3rem;
+}
+
+.hobbies-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hobbies-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.hobbies-list li::before {
+  content: "•";
+  color: #dc3545;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Goal Section */
+.goal-section {
+  margin-bottom: 3rem;
+}
+
+.goal-text {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Quote Section */
+.quote-section {
+  margin-bottom: 2rem;
+}
+
+.programming-quote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #dc3545;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+.programming-quote p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.programming-quote cite {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Footer */
+.footer {
+  background-color: #e8e8e8;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #dc3545;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: #ccc;
+}
+
+.copyright {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 1rem 1rem;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-button {
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .content-container {
+    padding: 0 1rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detail-label {
+    min-width: auto;
+  }
+}
