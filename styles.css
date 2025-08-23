@@ -8,7 +8,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: #000000;
-  background: #ffffff;
+  background: #efefef84;
   font-weight: 400;
 }
 
@@ -61,7 +61,7 @@ html {
   text-decoration: none;
   color: #000000;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   transition: opacity 0.2s ease;
 }
@@ -121,7 +121,7 @@ html {
   color: #ffffff;
   border: none;
   padding: 1.2rem 3rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
@@ -162,8 +162,15 @@ html {
   font-size: 2.5rem;
   font-weight: 300;
   color: #000000;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   letter-spacing: -0.5px;
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 4rem;
 }
 
 .details-grid {
@@ -181,7 +188,7 @@ html {
 .detail-label {
   font-weight: 600;
   color: red;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
   display: block;
@@ -275,6 +282,7 @@ html {
 
 .social-link:hover {
   opacity: 0.6;
+  color: red;
 }
 
 .separator {
