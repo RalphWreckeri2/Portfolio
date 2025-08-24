@@ -120,7 +120,7 @@ html {
   font-size: 1.2rem;
   font-weight: 400;
   color: #666666;
-  margin-bottom: 4rem;
+  margin: auto 0 4rem auto;
   line-height: 1.6;
   white-space: pre-line;
   text-align: justify;
