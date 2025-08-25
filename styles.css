@@ -68,22 +68,22 @@ html {
 
 .nav-link:hover,
 .nav-link.active {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   color: red;
 }
 
 /* Hero Section */
 .hero-section {
-  min-height: 100vh;
+  min-height: clamp(60vh, 100vh, 120vh);
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .hero-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -99,6 +99,15 @@ html {
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: 2rem;
+  color: #000000;
+}
+
+.about-title {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 0;
   color: #000000;
 }
 
@@ -120,7 +129,7 @@ html {
   font-size: 1.2rem;
   font-weight: 400;
   color: #666666;
-  margin: auto 0 4rem auto;
+  margin: 0 0 4rem auto;
   line-height: 1.6;
   white-space: pre-line;
   text-align: justify;
@@ -380,7 +389,16 @@ html {
   .about-button {
     padding: 1rem 2rem;
     font-size: 0.9rem;
-    margin: 0 2rem 4rem 0;
+    margin: 2rem;
+  }
+
+  .hero-foreword {
+    font-size: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .hero-title {
+    margin-bottom: 1rem;
   }
 }
 
@@ -428,6 +446,15 @@ html {
   .about-button {
     padding: 1rem 2rem;
     font-size: 0.9rem;
-    margin: 0 2rem 4rem 0;
+    margin: 2rem;
+  }
+
+  .hero-foreword {
+    font-size: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .hero-title {
+    margin-bottom: 1rem;
   }
 }
