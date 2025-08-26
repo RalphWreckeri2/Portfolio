@@ -125,14 +125,20 @@ html {
   line-height: 1.6;
 }
 
+.foreword-buttons-container {
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  padding-right: 5rem;
+}
+
 .hero-foreword {
   font-size: 1.2rem;
   font-weight: 400;
   color: #666666;
-  margin: 0 5rem 4rem auto;
   line-height: 1.6;
   white-space: pre-line;
   text-align: justify;
+  margin-bottom: 2rem;
 }
 
 .cta-button {
@@ -152,6 +158,13 @@ html {
   background: #333333;
 }
 
+.about-buttons-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
 .about-button {
   background: #000000;
   color: #ffffff;
@@ -163,7 +176,10 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  margin: 0 3rem 4rem 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-button:hover {
@@ -391,13 +407,22 @@ html {
     margin: 2rem;
   }
 
-  .hero-foreword {
-    font-size: 1rem;
-    margin: 2rem;
-  }
-
   .hero-title {
     margin-bottom: 1rem;
+  }
+
+  .about-buttons-section {
+    justify-content: center; /* center on mobile */
+  }
+
+  .foreword-buttons-container {
+    padding-right: 0; /* remove right padding on smaller screens */
+    padding-left: 0;
+  }
+
+  .hero-foreword {
+    margin: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -448,12 +473,21 @@ html {
     margin: 2rem;
   }
 
-  .hero-foreword {
-    font-size: 1rem;
-    margin: 2rem;
-  }
-
   .hero-title {
     margin-bottom: 1rem;
+  }
+
+  .about-buttons-section {
+    justify-content: center; /* center on mobile */
+  }
+
+  .foreword-buttons-container {
+    padding-right: 0; /* remove right padding on smaller screens */
+    padding-left: 0;
+  }
+
+  .hero-foreword {
+    margin: 1.5rem;
+    font-size: 1rem;
   }
 }
