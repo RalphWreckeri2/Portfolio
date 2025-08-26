@@ -81,9 +81,26 @@ html {
   margin-top: 80px;
 }
 
+.projects-section {
+  min-height: clamp(60vh, 90vh, 110vh);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-top: 40px;
+}
+
 .hero-container {
   max-width: 1200px;
   margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -352,6 +369,13 @@ html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .projects-container {
     grid-template-columns: 1fr;
     text-align: center;
     align-items: center;
