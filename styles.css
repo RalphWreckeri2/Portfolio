@@ -372,6 +372,15 @@ html {
   background: #ffffff;
 }
 
+.project-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* center image horizontally in its half */
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
 .project-cards-container {
   display: grid;
   /* Set 2 columns as default for most screens */
@@ -387,7 +396,7 @@ html {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem;
   gap: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -405,11 +414,14 @@ html {
 
 /* Image smaller than card */
 .project-card-image {
-  width: auto;
-  height: 150px;
-  object-fit: cover;
-  flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
   display: block;
+  object-fit: cover;
+  max-height: 150px;
+  margin-right: 1rem;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .project-card-content {
@@ -573,6 +585,15 @@ html {
     border-radius: 8px; /* optional: match card corners */
   }
 
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* spacing between text, links, etc. */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
   .project-card-content {
     display: flex;
     flex-direction: column;
@@ -671,6 +692,15 @@ html {
     max-height: 200px; /* optional: limit tall images */
     object-fit: cover;
     border-radius: 8px; /* optional: match card corners */
+  }
+
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* spacing between text, links, etc. */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .project-card-content {
