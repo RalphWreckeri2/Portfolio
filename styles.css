@@ -416,7 +416,7 @@ html {
 .project-card-image {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 2px;
   display: block;
   object-fit: cover;
   max-height: 150px;
@@ -462,6 +462,22 @@ html {
 
 .project-links {
   display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  box-sizing: border-box;
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.4;
 }
 
 .project-card-link {
@@ -469,6 +485,7 @@ html {
   color: #555555b6;
   text-decoration: none;
   margin-right: 1rem;
+  transition: color 0.2s ease;
 }
 
 .project-card-link:hover {
