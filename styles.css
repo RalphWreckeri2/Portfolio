@@ -798,6 +798,11 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Ensure consistent resets for mobile */
+  html {
+    -webkit-text-size-adjust: 100%; /* Prevent font boosting */
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1000,6 +1005,11 @@ html {
 }
 
 @media (max-width: 480px) {
+  /* Ensure consistent resets for mobile */
+  html {
+    -webkit-text-size-adjust: 100%; /* Prevent font boosting */
+  }
+
   .hero-title {
     font-size: 2.5rem;
     text-align: center;
