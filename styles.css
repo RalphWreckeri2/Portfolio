@@ -409,7 +409,7 @@ html {
 
 .project-card:hover {
   transform: translateY(-0.5px);
-  box-shadow: 0 1px 4px rgba(172, 0, 0, 0.401);
+  box-shadow: 0 1px 4px rgba(172, 0, 0, 0.703);
 }
 
 /* Image smaller than card */
@@ -728,7 +728,6 @@ html {
 .form-textarea {
   padding: 14px 16px;
   border: 1px solid black;
-  border-radius: 8px;
   background-color: white;
   color: black;
   font-size: 1rem;
@@ -743,7 +742,7 @@ html {
 /* Focus state */
 .form-input:focus,
 .form-textarea:focus {
-  border-color: red;
+  border-color: rgba(255, 0, 0, 0.301);
   outline: none;
   box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.3);
 }
@@ -916,11 +915,41 @@ html {
     justify-content: center;
   }
 
-  .project-card-content {
+  .contact-grid {
+    display: flex;
+    flex-direction: column; /* Stack items in one column */
+    gap: 40px; /* Space between elements */
+  }
+
+  .contact-main-content {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem; /* spacing between text, links, etc. */
-    width: 100%;
+    align-items: center;
+    /*padding: 60px 24px 80px;*/
+  }
+
+  .contact-content-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 40px; /* Space between elements */
+  }
+
+  .info-header {
+    grid-column: 1 / -1; /* span across the entire column */
+    text-align: center; /* center the content */
+    margin-bottom: 20px; /* add spacing below the header */
+  }
+
+  .contact-grid {
+    gap: 20px;
+  }
+
+  .contact-info,
+  .form-container {
+    width: 100%; /* Full width for both sections */
+    max-width: 500px; /* Optional: limit max width */
+    margin: auto; /* Center horizontally */
+    padding: 20px;
   }
 }
 
