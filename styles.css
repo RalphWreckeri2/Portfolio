@@ -727,7 +727,7 @@ html {
 .form-input,
 .form-textarea {
   padding: 14px 16px;
-  border: 1px solid black;
+  border: 1px solid #333333;
   background-color: white;
   color: black;
   font-size: 1rem;
@@ -893,6 +893,50 @@ html {
     text-align: center;
   }
 
+  .project-cards-container {
+    display: grid;
+    grid-template-columns: 1fr; /* one card per row */
+    padding: 0 2rem;
+    gap: 2.5rem;
+  }
+
+  .project-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: flex-start; /* align content nicely */
+    padding: 2rem;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+  }
+
+  .project-card-image {
+    width: 50%; /* take full card width */
+    height: auto; /* keep proportions */
+    max-height: 100px; /* optional: limit tall images */
+    max-width: 100px;
+    object-fit: cover;
+    border-radius: 8px; /* optional: match card corners */
+  }
+
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* spacing between text, links, etc. */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* spacing between text, links, etc. */
+    width: 100%;
+  }
+
   .contact-main-content {
     display: flex;
     flex-direction: column;
@@ -1025,7 +1069,7 @@ html {
     font-size: 0.9rem;
     padding: 1rem; /* Increased from 0.75rem for better touch targets */
     width: 100%;
-    border: 1px solid black; /* Ensure consistent border */
+    border: 1px solid #333333; /* Ensure consistent border */
   }
 
   .form-textarea {
@@ -1199,9 +1243,10 @@ html {
   }
 
   .project-card-image {
-    width: 100%; /* take full card width */
+    width: 50%; /* take full card width */
     height: auto; /* keep proportions */
-    max-height: 200px; /* optional: limit tall images */
+    max-height: 100px; /* optional: limit tall images */
+    max-width: 100px;
     object-fit: cover;
     border-radius: 8px; /* optional: match card corners */
   }
@@ -1360,7 +1405,7 @@ html {
     font-size: 0.9rem;
     padding: 1rem; /* Increased from 0.75rem for better touch targets */
     width: 100%;
-    border: 1px solid black; /* Ensure consistent border */
+    border: 1px solid #333333; /* Ensure consistent border */
   }
 
   .form-textarea {
