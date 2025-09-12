@@ -18,6 +18,7 @@ The goal of this project is to provide a digital space to highlight my journey, 
 
 - HTML
 - CSS
+- JS
 
 ## 📬 Contact
 
