@@ -915,6 +915,13 @@ html {
     justify-content: center;
   }
 
+  .project-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* spacing between text, links, etc. */
+    width: 100%;
+  }
+
   .contact-grid {
     display: flex;
     flex-direction: column; /* Stack items in one column */
@@ -1059,5 +1066,42 @@ html {
     flex-direction: column;
     gap: 0.75rem; /* spacing between text, links, etc. */
     width: 100%;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-direction: column; /* Stack items in one column */
+    gap: 40px; /* Space between elements */
+  }
+
+  .contact-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding: 60px 24px 80px;*/
+  }
+
+  .contact-content-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 40px; /* Space between elements */
+  }
+
+  .info-header {
+    grid-column: 1 / -1; /* span across the entire column */
+    text-align: center; /* center the content */
+    margin-bottom: 20px; /* add spacing below the header */
+  }
+
+  .contact-grid {
+    gap: 20px;
+  }
+
+  .contact-info,
+  .form-container {
+    width: 100%; /* Full width for both sections */
+    max-width: 500px; /* Optional: limit max width */
+    margin: auto; /* Center horizontally */
+    padding: 20px;
   }
 }
