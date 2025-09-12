@@ -877,12 +877,22 @@ html {
   .foreword-buttons-container {
     padding-right: 0; /* remove right padding on smaller screens */
     padding-left: 0;
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-foreword {
     margin: 1.5rem;
     font-size: 1rem;
+    justify-content: center;
+    text-align: center;
   }
+
   .contact-main-content {
     display: flex;
     flex-direction: column;
@@ -1156,9 +1166,17 @@ html {
     padding-left: 0;
   }
 
+  .hero-image {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
   .hero-foreword {
     margin: 1.5rem;
     font-size: 1rem;
+    justify-content: center;
+    text-align: center;
   }
 
   .project-cards-container {
