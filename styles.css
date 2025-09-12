@@ -879,84 +879,123 @@ html {
     font-size: 1rem;
   }
 
-  .project-cards-container {
-    display: grid;
-    grid-template-columns: 1fr; /* one card per row */
-    padding: 0 2rem;
-    gap: 2.5rem;
-  }
-
-  .project-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column; /* stack children vertically */
-    align-items: flex-start; /* align content nicely */
-    padding: 2rem;
-    gap: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-  }
-
-  .project-card-image {
-    width: 100%; /* take full card width */
-    height: auto; /* keep proportions */
-    max-height: 200px; /* optional: limit tall images */
-    object-fit: cover;
-    border-radius: 8px; /* optional: match card corners */
-  }
-
-  .project-image-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem; /* spacing between text, links, etc. */
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .project-card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem; /* spacing between text, links, etc. */
-    width: 100%;
-  }
-
-  .contact-grid {
-    display: flex;
-    flex-direction: column; /* Stack items in one column */
-    gap: 40px; /* Space between elements */
-  }
-
   .contact-main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding: 60px 24px 80px;*/
+    justify-content: center;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    text-align: center; /* Ensure all text is centered by default */
+    box-sizing: border-box; /* Ensure padding doesn’t break width */
   }
 
   .contact-content-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 40px; /* Space between elements */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center; /* Center all children */
   }
 
   .info-header {
-    grid-column: 1 / -1; /* span across the entire column */
-    text-align: center; /* center the content */
-    margin-bottom: 20px; /* add spacing below the header */
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    grid-column: unset; /* Remove desktop grid-column to avoid conflicts */
   }
 
   .contact-grid {
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
   }
 
   .contact-info,
   .form-container {
-    width: 100%; /* Full width for both sections */
-    max-width: 500px; /* Optional: limit max width */
-    margin: auto; /* Center horizontally */
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
     padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Center text for consistency */
+  }
+
+  /* Ensure contact cards and form elements respect centering */
+  .contact-details {
+    align-items: left; /* Center contact cards */
+  }
+
+  .contact-card {
+    justify-content: left; /* Center card content */
+    text-align: left;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Stack name and email on mobile */
+    gap: 16px;
+  }
+
+  .form-group {
+    align-items: left; /* Center form inputs */
+  }
+
+  .form-label {
+    text-align: left; /* Align labels to the left */
+  }
+
+  .submit-button {
+    justify-content: left; /* Center button content */
+    width: 100%; /* Full width button */
+    max-width: 300px; /* Optional max width for better appearance */
+    margin: 20px auto; /* Center button */
+  }
+
+  .info-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .contact-social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-social-links {
+    justify-content: center; /* Center social links */
+  }
+
+  .footer {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #666;
+    text-align: center;
   }
 }
 
@@ -1078,30 +1117,118 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding: 60px 24px 80px;*/
+    justify-content: center;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    text-align: center; /* Ensure all text is centered by default */
+    box-sizing: border-box; /* Ensure padding doesn’t break width */
   }
 
   .contact-content-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 40px; /* Space between elements */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center; /* Center all children */
   }
 
   .info-header {
-    grid-column: 1 / -1; /* span across the entire column */
-    text-align: center; /* center the content */
-    margin-bottom: 20px; /* add spacing below the header */
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    grid-column: unset; /* Remove desktop grid-column to avoid conflicts */
   }
 
   .contact-grid {
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
   }
 
   .contact-info,
   .form-container {
-    width: 100%; /* Full width for both sections */
-    max-width: 500px; /* Optional: limit max width */
-    margin: auto; /* Center horizontally */
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
     padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Center text for consistency */
+  }
+
+  /* Ensure contact cards and form elements respect centering */
+  .contact-details {
+    align-items: left; /* Center contact cards */
+  }
+
+  .contact-card {
+    justify-content: left; /* Center card content */
+    text-align: left;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Stack name and email on mobile */
+    gap: 16px;
+  }
+
+  .form-group {
+    align-items: left; /* Center form inputs */
+  }
+
+  .form-label {
+    text-align: left; /* Align labels to the left */
+  }
+
+  .submit-button {
+    justify-content: left; /* Center button content */
+    width: 100%; /* Full width button */
+    max-width: 300px; /* Optional max width for better appearance */
+    margin: 20px auto; /* Center button */
+  }
+
+  .info-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .contact-social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-social-links {
+    justify-content: center; /* Center social links */
+  }
+
+  .footer {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #666;
+    text-align: center;
   }
 }
