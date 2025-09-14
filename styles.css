@@ -849,7 +849,12 @@ html {
   }
 
   .nav-menu {
-    gap: 2rem;
+    gap: 1rem;
+  }
+
+  .vav-link,
+  .nav-link actuve {
+    font-size: 0.9rem;
   }
 
   .details-grid {
