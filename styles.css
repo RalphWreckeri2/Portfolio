@@ -79,6 +79,8 @@ html {
   align-items: center;
   padding: 0 2rem;
   margin-top: 80px;
+  width: 100%; /* Ensure it takes the full width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .projects-section {
@@ -96,6 +98,8 @@ html {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+  flex-shrink: 1;
+  flex-grow: 0;
 }
 
 .projects-container {
@@ -824,6 +828,11 @@ html {
     text-align: center;
     align-items: center;
     gap: 4rem;
+    margin: 0 auto; /* Center the container horizontally */
+    flex-shrink: 1;
+    flex-grow: 0;
+    width: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
   }
 
   .projects-container {
@@ -852,8 +861,8 @@ html {
     gap: 1rem;
   }
 
-  .vav-link,
-  .nav-link actuve {
+  .nav-link,
+  .nav-link active {
     font-size: 0.9rem;
   }
 
@@ -1193,6 +1202,25 @@ html {
     height: auto;
     object-fit: contain;
     filter: invert(1);
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 0;
+    flex-shrink: 1;
+    flex-grow: 0;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+  }
+
+  .nav-link,
+  .nav-link active {
+    font-size: 0.9rem;
   }
 
   .hero-title {
