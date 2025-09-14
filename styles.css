@@ -946,6 +946,12 @@ html {
     justify-content: center;
   }
 
+  .project-image {
+    width: 50%;
+    height: auto;
+    max-width: 400px;
+  }
+
   .project-card-content {
     display: flex;
     flex-direction: column;
@@ -1290,6 +1296,12 @@ html {
     width: 100%;
     align-items: center;
     justify-content: center;
+  }
+
+  .project-image {
+    width: 50%;
+    height: auto;
+    max-width: 400px;
   }
 
   .project-card-content {
