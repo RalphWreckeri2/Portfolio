@@ -947,6 +947,7 @@ html {
   }
 
   .project-image {
+    margin: 20px auto;
     width: 50%;
     height: auto;
     max-width: 400px;
@@ -1299,6 +1300,7 @@ html {
   }
 
   .project-image {
+    margin: 20px auto;
     width: 50%;
     height: auto;
     max-width: 400px;
