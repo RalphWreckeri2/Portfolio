@@ -1,24 +1,16 @@
-// Contact form handling
 document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault()
+  e.preventDefault();
 
-  // Get form data
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  }
+  emailjs.sendForm("service_38a27a4", "template_p1v9ddf", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
+      this.reset();
+    }, (error) => {
+      console.error("Error:", error);
+      alert("❌ Failed to send message.");
+    });
+});
 
-  // Here you would typically send the data to your server
-  console.log("Form submitted:", formData)
-
-  // Show success message (you can customize this)
-  alert("Thank you for your message! I will get back to you soon.")
-
-  // Reset form
-  this.reset()
-})
 
 // Smooth scrolling for navigation (if needed)
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

@@ -131,6 +131,7 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .cta-button:hover {
@@ -378,7 +379,6 @@ html {
 .project-card-image {
   max-width: 100%;
   height: auto;
-  border-radius: 2px;
   display: block;
   object-fit: cover;
   max-height: 150px;
@@ -1241,12 +1241,11 @@ html {
   }
 
   .project-card-image {
-    width: 50%; /* take full card width */
+    width: 100%; /* take full card width */
     height: auto; /* keep proportions */
     max-height: 100px; /* optional: limit tall images */
     max-width: 100px;
     object-fit: cover;
-    border-radius: 8px; /* optional: match card corners */
   }
 
   .project-image-container {

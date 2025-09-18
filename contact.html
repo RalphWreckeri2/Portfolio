@@ -117,7 +117,7 @@
             <div class="form-container">
               <h2 class="form-title">Send Me a Message</h2>
 
-              <form id="contactForm" class="contact-form">
+              <form id="contactForm" class="contact-form" action="sendMail.ph">
                 <div class="form-row">
                   <div class="form-group">
                     <label for="name" class="form-label">Full Name</label>
@@ -224,6 +224,11 @@
       </div>
     </footer>
 
-    <script src="contact-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("ymvg4Db5q7Fviryui"); // Replace with your EmailJS public key
+      })();
+    </script>
   </body>
 </html>
