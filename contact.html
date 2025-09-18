@@ -225,27 +225,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("ymvg4Db5q7Fviryui"); // Your public key
-      })();
-
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          emailjs.sendForm("service_38a27a4", "template_p1v9ddf", this).then(
-            () => {
-              alert("✅ Message sent successfully!");
-              this.reset();
-            },
-            (error) => {
-              console.error("Error:", error);
-              alert("❌ Failed to send message.");
-            }
-          );
-        });
-    </script>
+    <script src="contact-script.js"></script>
   </body>
 </html>

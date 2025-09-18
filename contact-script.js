@@ -1,3 +1,7 @@
+(function () {
+  emailjs.init("ymvg4Db5q7Fviryui"); // Your EmailJS public key
+})();
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -11,17 +15,16 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     });
 });
 
-
-// Smooth scrolling for navigation (if needed)
+// Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault()
-    const target = document.querySelector(this.getAttribute("href"))
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      })
+      });
     }
-  })
-})
+  });
+});
