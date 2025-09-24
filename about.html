@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -16,7 +20,7 @@
         <div class="nav-logo">
           <div class="logo-container">
             <img
-              src="assets\my_logo-removebg-preview.png"
+              src="assets\\my_logo-removebg-preview.png"
               alt="Ralph Matthew Logo"
               class="logo-image"
             />
@@ -35,7 +39,7 @@
         <div class="hero-container">
           <div class="hero-image">
             <img
-              src="assets\formal_pic-removebg-preview.png"
+              src="assets\\formal_pic-removebg-preview.png"
               alt="Ralph Matthew"
               class="profile-image"
             />
@@ -49,14 +53,108 @@
               Skills, Assets, and Projects that were honed along the way.
             </h2>
             <div class="about-buttons-section">
-              <a href="skills.html" class="about-button">Skills</a>
-              <a href="assets.html" class="about-button">Assets</a>
               <a href="projects.html" class="about-button">Projects</a>
+              <a href="assets/resume.pdf" class="about-button" target="_blank"
+                >Resume</a
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Enhanced tech stack section with progress bars -->
+    <section class="tech-stack">
+      <div class="tech-stack-container">
+        <h2 class="section-title">TECH STACK</h2>
+        <div class="underline"></div>
+        <div class="tech-skills-grid">
+          <div class="tech-skill-item">
+            <div class="tech-skill-header">
+              <i class="devicon-html5-plain colored tech-skill-icon"></i>
+              <div class="tech-skill-info">
+                <h3 class="tech-skill-name">HTML</h3>
+                <span class="tech-skill-level">Intermediate</span>
+              </div>
+              <span class="tech-skill-percentage">60%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-progress="60"></div>
+            </div>
+          </div>
+
+          <div class="tech-skill-item">
+            <div class="tech-skill-header">
+              <i class="devicon-css3-plain colored tech-skill-icon"></i>
+              <div class="tech-skill-info">
+                <h3 class="tech-skill-name">CSS</h3>
+                <span class="tech-skill-level">Intermediate</span>
+              </div>
+              <span class="tech-skill-percentage">55%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-progress="55"></div>
+            </div>
+          </div>
+
+          <div class="tech-skill-item">
+            <div class="tech-skill-header">
+              <i class="devicon-javascript-plain colored tech-skill-icon"></i>
+              <div class="tech-skill-info">
+                <h3 class="tech-skill-name">Java</h3>
+                <span class="tech-skill-level">Intermediate</span>
+              </div>
+              <span class="tech-skill-percentage">60%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-progress="60"></div>
+            </div>
+          </div>
+
+          <div class="tech-skill-item">
+            <div class="tech-skill-header">
+              <i class="devicon-php-plain colored tech-skill-icon"></i>
+              <div class="tech-skill-info">
+                <h3 class="tech-skill-name">PHP</h3>
+                <span class="tech-skill-level">Intermediate</span>
+              </div>
+              <span class="tech-skill-percentage">70%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-progress="70"></div>
+            </div>
+          </div>
+
+          <div class="tech-skill-item">
+            <div class="tech-skill-header">
+              <i class="devicon-mysql-plain colored tech-skill-icon"></i>
+              <div class="tech-skill-info">
+                <h3 class="tech-skill-name">MySQL</h3>
+                <span class="tech-skill-level">Intermediate</span>
+              </div>
+              <span class="tech-skill-percentage">80%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-progress="80"></div>
+            </div>
+          </div>
+
+          <div class="tech-skill-item">
+            <div class="tech-skill-header">
+              <i class="devicon-cplusplus-plain colored tech-skill-icon"></i>
+              <div class="tech-skill-info">
+                <h3 class="tech-skill-name">C++</h3>
+                <span class="tech-skill-level">Intermediate</span>
+              </div>
+              <span class="tech-skill-percentage">60%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-progress="60"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="footer-content">
@@ -76,5 +174,34 @@
         <p class="copyright">Copyright © 2025 | All Rights Reserved</p>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress-fill");
+
+        const animateProgressBars = () => {
+          progressBars.forEach((bar) => {
+            const progress = bar.getAttribute("data-progress");
+            bar.style.width = progress + "%";
+          });
+        };
+
+        // Trigger animation when tech stack section comes into view
+        const techStackSection = document.querySelector(".tech-stack");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setTimeout(animateProgressBars, 300);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+
+        observer.observe(techStackSection);
+      });
+    </script>
   </body>
 </html>

@@ -166,6 +166,103 @@ html {
   background: #333333;
 }
 
+/* Enhanced Tech Stack Section with Progress Bars */
+.tech-stack {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.tech-stack-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.tech-skill-item {
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-skill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tech-skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-skill-icon {
+  font-size: 40px; /* icon size */
+  flex-shrink: 0; /* keeps spacing consistent */
+  line-height: 1; /* avoids weird spacing */
+}
+
+.tech-skill-info {
+  flex: 1;
+}
+
+.tech-skill-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: 0.5px;
+}
+
+.tech-skill-level {
+  font-size: 0.9rem;
+  color: #666666;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tech-skill-percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: red;
+  min-width: 40px;
+  text-align: right;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #000000 0%, red 100%);
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #ffffff;
+  opacity: 0.8;
+}
+
 .hero-image {
   display: flex;
   justify-content: center;
@@ -1118,6 +1215,39 @@ html {
     transform: none; /* Disable hover effects */
     border-color: inherit;
   }
+
+  .tech-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tech-skill-item {
+    padding: 1.5rem;
+  }
+
+  .tech-skill-header {
+    gap: 0.75rem;
+  }
+
+  .tech-skill-icon {
+    font-size: 32px;
+  }
+
+  .tech-skill-name {
+    font-size: 1.1rem;
+  }
+
+  .tech-skill-level {
+    font-size: 0.8rem;
+  }
+
+  .tech-skill-percentage {
+    font-size: 0.9rem;
+  }
+
+  .progress-bar {
+    height: 6px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1482,5 +1612,22 @@ html {
   .contact-card:hover {
     transform: none; /* Disable hover effects */
     border-color: inherit;
+  }
+
+  .tech-skill-item {
+    padding: 1rem;
+  }
+
+  .tech-skill-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-skill-info {
+    min-width: 120px;
+  }
+
+  .tech-skill-percentage {
+    margin-left: auto;
   }
 }
