@@ -950,6 +950,7 @@ html {
 
   .about-buttons-section {
     justify-content: center; /* center on mobile */
+    gap: 1rem;
   }
 
   .hero-image {
@@ -1343,6 +1344,7 @@ html {
 
   .about-buttons-section {
     justify-content: center; /* center on mobile */
+    gap: 1rem;
   }
 
   .hero-image {
