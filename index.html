@@ -1,155 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ralph Matthew - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <div class="logo-container">
-            <img
-              src="assets\my_logo-removebg-preview.png"
-              alt="Ralph Matthew Logo"
-              class="logo-image"
-            />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ralph Matthew Samonte — Resume / Portfolio</title>
+  <meta name="description"
+    content="Ralph Matthew Samonte — BSIT student and aspiring web developer building registration, records, and enrollment systems." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="theme.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">R. Samonte</div>
+      <ul class="nav-menu">
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Top Header Profile Section -->
+    <header class="profile-header">
+      <img src="assets/formal.jpg" alt="Ralph Matthew Samonte" class="profile-pic" />
+      <div class="profile-info">
+        <h1 class="profile-name">Ralph Matthew Samonte <span class="verified-badge">✔</span></h1>
+        <p class="profile-location">Lipa City, Batangas</p>
+        <p class="profile-role">Aspiring Data Analyst \ Business Analytics Student \ Data Enthusiast</p>
+
+        <div class="profile-actions">
+          <a href="mailto:ralphmatthew.samonte@example.com" class="btn btn-primary">✉ Send Email</a>
+          <a href="https://github.com/RalphWreckeri2" class="btn btn-secondary" target="_blank">View GitHub</a>
+          <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
         </div>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link active">HOME</a></li>
-          <li><a href="about.html" class="nav-link">ABOUT</a></li>
-          <li><a href="contact.html" class="nav-link">CONTACT ME</a></li>
-        </ul>
       </div>
-    </nav>
+    </header>
 
-    <main>
-      <section class="hero-section">
-        <div class="hero-container">
-          <div class="hero-image">
-            <img
-              src="assets\my_pic.jpg"
-              alt="Ralph Matthew"
-              class="profile-image"
-            />
-          </div>
-          <div class="hero-content">
-            <h1 class="hero-title">
-              HEY! IT'S ME
-              <span class="name-highlight">RALPH MATTHEW</span>
-            </h1>
-            <h2 class="hero-subtitle">
-              Aspiring Web Developer | Problem Solver | Tech Enthusiast
-            </h2>
-            <a href="contact.html#contactForm" class="cta-button">HIT ME UP!</a>
-          </div>
-        </div>
-      </section>
+    <!-- Two Column Layout -->
+    <div class="content-grid">
 
-      <section class="details-section">
-        <div class="content-container">
-          <div class="personal-details">
-            <h2 class="section-title">PERSONAL DETAILS</h2>
-            <div class="underline"></div>
-            <div class="details-grid">
-              <div class="detail-item">
-                <span class="detail-label">NAME</span>
-                <span class="detail-value">Ralph Matthew A. Samonte</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">AGE</span>
-                <span class="detail-value">19</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">ADDRESS</span>
-                <span class="detail-value"
-                  >Brgy. Anilao, Lipa City, Batangas</span
-                >
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">NATIONALITY</span>
-                <span class="detail-value">Filipino</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">UNIVERSITY</span>
-                <span class="detail-value"
-                  >Batangas State University - TNEU Lipa Campus</span
-                >
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">PROGRAM</span>
-                <span class="detail-value"
-                  >Bachelor of Science in Information Technology Major in
-                  Business Analytics</span
-                >
-              </div>
+      <!-- Left Column -->
+      <div class="left-col">
+
+        <section class="content-section">
+          <h2 class="section-title">About</h2>
+          <div class="text-content">
+            <p>
+              I'm a third-year BSIT student at Batangas State University — TNEU Lipa Campus, majoring in Business
+              Analytics. I'm a "wannabe data analyst" and data enthusiast who loves building practical, scalable systems
+              like event registration platforms, guidance office tools, and enrollment software.
+            </p>
+            <p>
+              My goal is to continuously grow as a developer by exploring new technologies and building projects that
+              solve real-world problems. I strive to sharpen my skills in web development and data analytics to
+              contribute to meaningful innovations.
+            </p>
+            <p>
+              Right now, I'm focusing on integrating data tools and techniques into modern applications and developing
+              solutions that streamline processes for organizations.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">Tech Stack</h2>
+
+          <div class="stack-category">
+            <h3 class="stack-label">Frontend</h3>
+            <div class="stack-items">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
           </div>
 
-          <div class="hobbies-section">
-            <h2 class="section-title">HOBBIES & INTERESTS</h2>
-            <div class="underline"></div>
-            <ul class="hobbies-list">
-              <li>Watching TV Shows (Dramas & Movies)</li>
-              <li>Reading Books (Fiction & Non-fiction)</li>
-              <li>Listening and Discovering Music</li>
-              <li>Browsing Trendy Topics on Social Media Platforms</li>
-            </ul>
+          <div class="stack-category">
+            <h3 class="stack-label">Backend & Core</h3>
+            <div class="stack-items">
+              <span>PHP</span>
+              <span>Java</span>
+              <span>C++</span>
+              <span>MySQL</span>
+              <span>Python</span>
+            </div>
           </div>
 
-          <div class="goal-section">
-            <h2 class="section-title">WHAT IS MY GOAL?</h2>
-            <div class="underline"></div>
-            <p class="goal-text">
-              My goal is to continuously grow as a developer by exploring new
-              technologies and building projects that solve real-world problems.
-              As a passionate BSIT student, I strive to sharpen my skills in web
-              development, contribute to meaningful innovations, and eventually
-              make a significant impact in the tech industry. This portfolio
-              serves as a reflection of what I've learned so far and a reminder
-              of the goals I continue to work toward.
-            </p>
+          <div class="stack-category">
+            <h3 class="stack-label">Data & Analytics</h3>
+            <div class="stack-items">
+              <span>Python</span>
+              <span>R</span>
+              <span>Jupyter Notebook</span>
+              <span>Anaconda</span>
+              <span>VS Code</span>
+              <span>Business Analytics</span>
+            </div>
           </div>
+        </section>
 
-          <div class="quote-section">
-            <blockquote class="programming-quote">
-              <p>
-                Programming isn't about what you know; it's about what you can
-                figure out.
-              </p>
-              <cite
-                >— and I'm always figuring it out, one project at a time.</cite
-              >
-            </blockquote>
+        <section class="content-section" style="margin-top: 3rem;">
+          <h2 class="section-title">Certifications & Events</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">Red Hat Application Development I: Programming in Java EE</h3>
+              <p class="timeline-subtitle">Red Hat Academy</p>
+              <p class="timeline-desc">Completed Course Attendance (AD183 - RHA) - Ver. 7.0.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">Cisco Networking Training</h3>
+              <p class="timeline-subtitle">Cisco</p>
+              <p class="timeline-desc">Completed foundational training in networking concepts, protocols, and infrastructure.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">Bitcoin & Blockchain Conferences</h3>
+              <p class="timeline-subtitle">Various Events</p>
+              <p class="timeline-desc">Attended countless conferences focusing on cryptocurrency, blockchain technology, and decentralized systems.</p>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="social-links">
-          <a href="https://www.facebook.com/ralphmatthew.13" class="social-link"
-            >Facebook</a
-          >
-          <span class="separator">|</span>
-          <a href="https://www.instagram.com/mnitheoo/" class="social-link"
-            >Instagram</a
-          >
-          <span class="separator">|</span>
-          <a href="https://github.com/RalphWreckeri2" class="social-link"
-            >GitHub</a
-          >
-        </div>
-        <p class="copyright">Copyright © 2025 | All Rights Reserved</p>
+        </section>
       </div>
-    </footer>
-  </body>
+
+      <!-- Right Column -->
+      <div class="right-col">
+
+        <!-- Access Card Graphic -->
+        <div class="access-card">
+          <div class="access-card-logo">
+            <span class="mark">&gt;_</span>
+          </div>
+          <div class="access-card-body">
+            <h3 class="card-title">DATA ANALYST / DEV</h3>
+            <p class="card-subtitle">ACCESS CARD</p>
+
+            <div class="card-details">
+              <p class="card-label">FOUNDING MEMBER</p>
+              <p class="card-name">RALPH MATTHEW</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-role">DEVELOPER</span>
+            <div class="card-qr"></div>
+          </div>
+        </div>
+
+        <section class="content-section" style="margin-top: 3rem;">
+          <h2 class="section-title">Projects / Experience</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title"><a href="https://github.com/RalphWreckeri2/REVELA-dev" target="_blank" style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">REVELA — Geospatial BI System</a></h3>
+              <p class="timeline-subtitle">Capstone Project (Python, React, Flutter)</p>
+              <p class="timeline-desc">A geospatial Business Intelligence system developed for the BPLO to automatically detect unregistered commercial establishments and generate compliance reports.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title"><a href="https://github.com/elliwinx/PesoSnartHire" target="_blank" style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">PESO SmartHire — Recruitment System</a></h3>
+              <p class="timeline-subtitle">Major Project (Python, MySQL, JS)</p>
+              <p class="timeline-desc">A web-based recruitment management system connecting applicants, employers, and administrators for efficient job postings and application tracking.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title"><a href="https://github.com/RalphWreckeri2/SCHEDULE" target="_blank" style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">SCHEDULE — Event Registration</a></h3>
+              <p class="timeline-subtitle">Deployed Project (PHP, MySQL)</p>
+              <p class="timeline-desc">An Event Registration and Management System that lets users register for events,
+                view details, and manage their registrations seamlessly.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title"><a href="https://github.com/RalphWreckeri2/StudentSuccessHub" target="_blank" style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">Student Success Hub</a></h3>
+              <p class="timeline-subtitle">In Development (PHP, MySQL)</p>
+              <p class="timeline-desc">A web application built to streamline the Office of Guidance and Counseling's
+                processes and ease the workload of staff members.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title"><a href="https://github.com/RalphWreckeri2/SERSys" target="_blank" style="text-decoration: underline; text-decoration-color: var(--border-color); text-underline-offset: 4px;">Student Enrollment System</a></h3>
+              <p class="timeline-subtitle">In Development (Java, SQL)</p>
+              <p class="timeline-desc">A Java-based desktop application designed to streamline enrollment and
+                registration for educational institutions.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Ralph Matthew Samonte. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
 </html>
